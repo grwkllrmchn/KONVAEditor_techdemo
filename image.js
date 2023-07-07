@@ -33,26 +33,102 @@ export const applyCrop = (pos, LAYER) => {
 	img.setAttrs(crop);
 }
 
-export const changeProportionsHandler = (event, STAGE) => {
+export const changeProportionsHandler = (event, LAYER, FAKELAYER, FAKEBORDER) => {
 	const param = event.target.getAttribute("data-param");
 
 	if (param === '1:1') {
-		STAGE.width(433);
-		STAGE.height(433);
+		LAYER.clip({
+			x: 400,
+			y: 100,
+			width: 433,
+			height: 433,
+		});
+		FAKELAYER.clip({
+			x: 400,
+			y: 100,
+			width: 433,
+			height: 433,
+		});
+		FAKEBORDER.setAttrs({
+			x: 400,
+			y: 100,
+			width: 433,
+			height: 433,
+			fill: 'transparent',
+			stroke: 'black',
+			strokeWidth: 4,
+		})
 	}
 
 	if (param === '4:5') {
-		STAGE.width(433);
-		STAGE.height(542);
+		LAYER.clip({
+			x: 400,
+			y: 100,
+			width: 433,
+			height: 542,
+		});
+		FAKELAYER.clip({
+			x: 400,
+			y: 100,
+			width: 433,
+			height: 542,
+		});
+		FAKEBORDER.setAttrs({
+			x: 400,
+			y: 100,
+			width: 433,
+			height: 542,
+			fill: 'transparent',
+			stroke: 'black',
+			strokeWidth: 4,
+		})
 	}
 
 	if (param === '16:9') {
-		STAGE.width(963);
-		STAGE.height(542);
+		LAYER.clip({
+			x: 400,
+			y: 100,
+			width: 963,
+			height: 542,
+		});
+		FAKELAYER.clip({
+			x: 400,
+			y: 100,
+			width: 963,
+			height: 542,
+		});
+		FAKEBORDER.setAttrs({
+			x: 400,
+			y: 100,
+			width: 963,
+			height: 542,
+			fill: 'transparent',
+			stroke: 'black',
+			strokeWidth: 4,
+		})
 	}
 
 	if (param === '9:16') {
-		STAGE.width(542);
-		STAGE.height(963);
+		LAYER.clip({
+			x: 400,
+			y: 100,
+			width: 542,
+			height: 963,
+		});
+		FAKELAYER.clip({
+			x: 400,
+			y: 100,
+			width: 542,
+			height: 963,
+		});
+		FAKEBORDER.setAttrs({
+			x: 400,
+			y: 100,
+			width: 542,
+			height: 963,
+			fill: 'transparent',
+			stroke: 'black',
+			strokeWidth: 4,
+		})
 	}
 }

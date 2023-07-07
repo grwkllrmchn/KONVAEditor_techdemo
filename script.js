@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	uploadBtn.addEventListener('change', uploadImageHandler);
 
 	for (let i = 0; i < proportionBtns.length; i++) {
-		proportionBtns[i].addEventListener("click", (event) => changeProportionsHandler(event, STAGE));
+		proportionBtns[i].addEventListener("click", (event) => changeProportionsHandler(event, LAYER, FAKELAYER, FAKEBORDER));
 	}
 
 	drawChanger.addEventListener('change', (e) => {
