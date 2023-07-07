@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://unpkg.com/konva@9.2.0/konva.min.js"></script>
+  <meta charset="utf-8" />
+  <title>Konva Circle Demo</title>
+  <style>
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+    .marginClass {
+      margin: 0 0 12px 0;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <div class="marginClass">
+    <button id="move_top">Move Image On Top</button>
+    <button id="move_bottom">Move Image On Bottom</button>
+    <span id="selected_tooltip">Selected image: </span>
+  </div>
+  <div class="marginClass">
+    <button class="proportion_btn" data-param="1:1">1:1</button>
+    <button class="proportion_btn" data-param="4:5">4:5</button>
+    <button class="proportion_btn" data-param="16:9">16:9</button>
+    <button class="proportion_btn" data-param="9:16">9:16</button>
+    <input type="checkbox" id="drawChanger">draw</input>
+    <select id="tool">
+      <option value="brush">Brush</option>
+      <option value="eraser">Eraser</option>
+    </select>
+    <select id="brushSize">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="20">20</option>
+    </select>
+  </div>
+  <div class="marginClass">
+    <input type="file" id="uploadBtn">
+  </div>
+  <div class="wrapper">
+    <div id="container"></div>
+  </div>
+</div>
+<script src="script.js" type="module"></script>
+<script src="zoom.js" type="module"></script>
+<script src="image.js" type="module"></script>
+<script src="history.js" type="module"></script>
+</body>
+</html>
